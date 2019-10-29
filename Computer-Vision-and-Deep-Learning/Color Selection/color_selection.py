@@ -21,7 +21,8 @@ thresholds = (image[:,:,0] < rgb_threshold[0]) \
             | (image[:,:,2] < rgb_threshold[2])
 color_select[thresholds] = [0,0,0]
 
-            
+           
 plt.imshow(color_select)
+plt.imsave('color_selected_output.png', color_select)
 plt.show()
 
